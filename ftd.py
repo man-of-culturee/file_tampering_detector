@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 
 
-# Add file
+
 def add_file():
     file_path = filedialog.askopenfilename()
     if file_path:
@@ -32,6 +32,8 @@ btn_frame.pack(pady=5)
 
 btn_style = {"width": 18, "height": 2}
 
+
+#Add files button
 tk.Button(btn_frame, text="Add File", command=add_file, **btn_style).grid(
     row=0, column=0, padx=5
 )
