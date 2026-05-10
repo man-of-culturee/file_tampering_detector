@@ -2,12 +2,12 @@ import tkinter as tk
 
 # window
 root = tk.Tk()
-root.title("File Integrity Checker")
+root.title("File Tampering Detector")
 root.geometry("600x500")
 root.resizable(False, False)
 
 # Title
-title = tk.Label(root, text="File Integrity Checker", font=("Arial", 16, "bold"))
+title = tk.Label(root, text="File Tampering Detector", font=("Arial", 16, "bold"))
 title.pack(pady=10)
 
 # List frame
