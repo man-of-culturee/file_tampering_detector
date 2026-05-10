@@ -27,6 +27,7 @@ def save_hashes():
     with open(HASH_FILE, "w") as f:
         json.dump(file_database, f)
 
+
 # database for hashes
 file_database = load_hashes()
 
@@ -76,6 +77,19 @@ def check_files():
             result_text.insert(tk.END, f"MODIFIED: {file}\n")
 
 
+# Remove file
+
+
+def remove_file():
+    selected = file_listbox.curselection()
+    if not selected:
+        messagebox.showwarning("Warning", "No file selected!")
+        return
+
+    for index in reversed(selected):
+        file_listbox.delete(index)
+
+
 # window
 root = tk.Tk()
 root.title("File Tampering Detector")
@@ -106,11 +120,18 @@ tk.Button(btn_frame, text="Add File", command=add_file, **btn_style).grid(
     row=0, column=0, padx=5
 )
 # Save original hashes button
-tk.Button(btn_frame, text="Save file hashes", command=save_original_hash, **btn_style).grid(
+tk.Button(
+    btn_frame, text="Save file hashes", command=save_original_hash, **btn_style
+).grid(
     row=0, column=2, padx=5
-)# Varify files button
+)  
+# Varify files button
 tk.Button(btn_frame, text="Varify files safety", command=check_files, **btn_style).grid(
     row=0, column=3, padx=5
+)
+# Remove file button
+tk.Button(btn_frame, text="Remove File", command=remove_file, **btn_style).grid(
+    row=0, column=1, padx=5
 )
 
 # Output box
