@@ -1,0 +1,24 @@
+# HOW TO USE
+
+1. Add Files
+	1. click "Add File"
+	2. select the file you want to track using the file picker
+	3. repeat for as many files as you want
+
+2. Save Original Hashes
+	1. after adding your files, click "Save File Hashes"
+	2. a popup will appear saying "Original hashes saved permanently!", click ok
+	3. your file fingerprints are now stored in a local JSON file
+	4. you are done!
+
+3. Verify Files Safety
+	1. click "Verify Files Safety"
+	2. the results will appear in the text box below showing each file as either:
+      		- SAFE: file has not been changed
+      		- MODIFIED: file has been tampered with
+      		- MISSING: file has been deleted or moved
+
+4. Remove a File
+	1. click on the file you want to remove from the list
+	2. click "Remove File"
+	3. the file will be removed from both the list and the saved database
